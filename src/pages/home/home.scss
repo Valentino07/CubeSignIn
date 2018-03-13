@@ -1,0 +1,32 @@
+page-home {
+    body{
+        background-color: #0077b8;
+        font-family: Poppins, sans-serif;
+    }
+    .title{
+        margin-top: 120px;
+        text-align: center;
+        color: white;
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 30px;
+    }
+    .button{
+        display: block;
+        text-align: center;
+        margin-top: 70px;
+    }
+    #button{
+        background-color: white;
+        color: #243841;
+        border: solid 1px white;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        width: 200px;
+        border-radius: 10px;
+        font-size: 15px;
+        font-weight: 600;
+        text-align: center;
+    }
+
+}

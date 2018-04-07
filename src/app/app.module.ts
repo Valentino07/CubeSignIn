@@ -7,28 +7,31 @@ import {Camera} from '@ionic-native/camera';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import {RegisterPage} from '../pages/register/register';
-import {SignInPage} from '../pages/sign-in/sign-in';
-import {LogoutPage} from '../pages/logout/logout';
 import {CameraRegisterPage} from '../pages/camera-register/camera-register'
 import { ServerProvider } from '../providers/server/server';
 import { Http , HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClient } from '@angular/common/http';
+import { CameraProvider } from '../providers/camera/camera';
+import { VerifyPinPage } from '../pages/verify-pin/verify-pin';
+import { ConfirmPage } from '../pages/confirm/confirm';
+import { FaceScannerPage } from '../pages/face-scanner/face-scanner';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     RegisterPage,
-    SignInPage,
-    LogoutPage,
-    CameraRegisterPage
+    CameraRegisterPage,
+    VerifyPinPage,
+    FaceScannerPage,
+    ConfirmPage,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     HttpModule,
-    IonicModule.forRoot(MyApp),
+    IonicModule.forRoot(MyApp)
 
   ],
   bootstrap: [IonicApp],
@@ -36,9 +39,10 @@ import { HttpClient } from '@angular/common/http';
     MyApp,
     HomePage,
     RegisterPage,
-    SignInPage,
-    LogoutPage,
-    CameraRegisterPage
+    CameraRegisterPage,
+    FaceScannerPage,
+    VerifyPinPage,
+    ConfirmPage
   ],
   providers: [
     StatusBar,
@@ -48,7 +52,8 @@ import { HttpClient } from '@angular/common/http';
     ServerProvider, 
     Http,
     HttpClientModule,
-    HttpClient
+    HttpClient,
+    CameraProvider
   ]
 })
 export class AppModule {}

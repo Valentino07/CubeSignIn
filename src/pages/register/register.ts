@@ -5,6 +5,7 @@ import { ServerProvider } from '../../providers/server/server';
 import { FormBuilder, Validators, FormGroup, FormControl } from '@angular/forms';
 import { Http , HttpModule } from '@angular/http';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { VerifyPinPage } from '../verify-pin/verify-pin';
 /**
  * Generated class for the RegisterPage page.
  *
@@ -22,8 +23,10 @@ export class RegisterPage {
   constructor(public navCtrl: NavController, private http: HttpClient, public formBuilder:FormBuilder, public server : ServerProvider, private alertCtrl:AlertController, public params : NavParams) {
 
   }
-  cameraRegister = CameraRegisterPage
 
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad RegisterPage');
+  }
   // ngOnInIt() {
   //   myForm = new FormGroup({
   //     email: new FormControl()
@@ -32,20 +35,20 @@ export class RegisterPage {
   
   // making sure that everything is required in the form and setting limitations for phone numbers
   myForm = this.formBuilder.group({
-    fullName: ['', Validators.required],
-    email: ['', Validators.compose([Validators.required, Validators.pattern("")])],
-    school: ['', Validators.required],
-    studentPhone: ['', Validators.compose([Validators.required, Validators.minLength(10), Validators.maxLength(10)])],
-    parentPhone: ['', Validators.compose([Validators.required, Validators.minLength(10), Validators.maxLength(10)])]
+    fullName: ['Andrew Le', Validators.required],
+    email: ['andrew@txtlabs.io', Validators.compose([Validators.required, Validators.pattern("")])],
+    school: ['UCI', Validators.required],
+    studentPhone: ['2133275938', Validators.compose([Validators.required, Validators.minLength(10), Validators.maxLength(10)])],
+    parentPhone: ['2133275938', Validators.compose([Validators.required, Validators.minLength(10), Validators.maxLength(10)])],
+    grade: ['College', Validators.required]
   })
-
 
   // making sure that everything is filled out
   formCheck(){
     // if everything is verified, save the data and push to the next page
     if(this.myForm.valid == true){
       // this.server.verifyNewUser().subscribe( (data:any) => {
-        this.verifyUser();
+      this.verifyUser();
       // })
     }
     // if there is an error in the form, return an error message
@@ -53,10 +56,20 @@ export class RegisterPage {
       this.errorForm();
     }
   }
+
   // saving the data and pushing it to the next page
   verifyUser() {
-    this.navCtrl.push(CameraRegisterPage, {userData : this.myForm});
+    let formData = new FormData();
+    formData.set('name', this.myForm.value.fullName);
+    formData.set('email', this.myForm.value.email);
+    formData.set('school', this.myForm.value.school);
+    formData.set('studentPhone', this.myForm.value.studentPhone);
+    formData.set('parentPhone', this.myForm.value.parentPhone);
+    formData.set('grade', this.myForm.value.grade);
+
+    this.navCtrl.push(VerifyPinPage, {userData : formData});
   }
+
   // returning an error message
   errorForm(){
     let alert = this.alertCtrl.create({
@@ -88,8 +101,8 @@ export class RegisterPage {
     alert.present();
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad RegisterPage');
-  }
+
+
+  
 
 }

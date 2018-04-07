@@ -1,0 +1,37 @@
+<ion-content padding>
+  <img  height="250" src="{{profilePicture}}">
+  <p>{{name}}</p>
+  <div *ngIf="info.type=='signIn'">
+    <p>What is the reason for your visit today?</p>
+    <ion-list>
+
+      <ion-item>
+        <ion-label>Homework</ion-label>
+        <ion-checkbox (click)=booleanChange(0)></ion-checkbox>
+      </ion-item>
+    
+      <ion-item>
+        <ion-label>Workshop</ion-label>
+        <ion-checkbox (click)=booleanChange(1)></ion-checkbox>
+      </ion-item>
+    
+      <ion-item>
+        <ion-label>Event</ion-label>
+        <ion-checkbox (click)=booleanChange(2)></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Coding</ion-label>
+        <ion-checkbox (click)=booleanChange(3)></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Other</ion-label>
+        <ion-checkbox (click)=booleanChange(4)></ion-checkbox>
+      </ion-item>
+      
+    </ion-list>
+  </div>
+  <button ion-button (click)=declineButton()>No. It is not me.</button>
+  <button ion-button (click)=confirmButton()>Yes! It is me.</button>
+</ion-content>

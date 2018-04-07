@@ -24,8 +24,11 @@
   <div class="formBox">
     <input id="parentPhone" formControlName="parentPhone" [class.invalid]="!myForm.controls.parentPhone.valid" type="phone" placeholder="Parent Phone Number">
   </div>
+  <div class="formBox">
+    <input id="grade" formControlName="grade" [class.invalid]="!myForm.controls.grade.valid" type="text" placeholder="Parent Phone Number">
+  </div>
 <div class="submit">
-  <button (click)="verifyUser()" type="submit" id="submitInfo">Submit</button>
+  <button (click)="formCheck()" type="submit" id="submitInfo">Submit</button>
 </div> 
 </form>
 <!-- <div [formGroup]="myForm">

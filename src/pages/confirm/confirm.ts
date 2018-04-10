@@ -59,6 +59,7 @@ export class ConfirmPage {
       })
     }else{
       this.server.checkOut(this.info.userID).then((data : any)=>{
+        console.log(data);
         if (data.status == 200){
           this.successPopUp();
         }else if (data.status == 404){
@@ -72,7 +73,7 @@ export class ConfirmPage {
   }
 
   declineButton(){
-    this.navCtrl.push(AlternateLoginPage);
+    this.navCtrl.push(AlternateLoginPage , { type : this.info.type});
   }
 
   successPopUp(){
@@ -105,7 +106,7 @@ export class ConfirmPage {
   logNotFoundPopUp(){
     let alert = this.alertCtrl.create({
       title: 'Forgot to Sign In',
-      message: "Don't forget to sign in next time.",
+      message: "Please sign in and sign out. Don't forget to sign in next time.",
       buttons: ['Dismiss']
     });
     alert.present();

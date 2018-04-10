@@ -1,3 +1,6 @@
 <ion-content padding>
- <h1>Alternate Login</h1>
+    <h1>Alternate Login</h1>
+    <ion-label>Email</ion-label>
+    <ion-input [(ngModel)]="email"></ion-input>
+    <button ion-button (click)="verify()">Verify</button>
 </ion-content>

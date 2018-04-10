@@ -17,8 +17,8 @@ import { ConfirmPage } from '../confirm/confirm';
   templateUrl: 'face-scanner.html',
 })
 export class FaceScannerPage {
-
   type;
+  
   constructor(public navCtrl: NavController, public navParams: NavParams, private camera: CameraProvider, private server : ServerProvider, private alertCtrl: AlertController) {
     this.type = this.navParams.get('type');
   }

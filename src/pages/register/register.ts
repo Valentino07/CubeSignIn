@@ -35,12 +35,12 @@ export class RegisterPage {
   
   // making sure that everything is required in the form and setting limitations for phone numbers
   myForm = this.formBuilder.group({
-    fullName: ['Andrew Le', Validators.required],
-    email: ['andrew@txtlabs.io', Validators.compose([Validators.required, Validators.pattern("")])],
-    school: ['UCI', Validators.required],
-    studentPhone: ['2133275938', Validators.compose([Validators.required, Validators.minLength(10), Validators.maxLength(10)])],
-    parentPhone: ['2133275938', Validators.compose([Validators.required, Validators.minLength(10), Validators.maxLength(10)])],
-    grade: ['College', Validators.required]
+    fullName: ['', Validators.required],
+    email: ['', Validators.compose([Validators.required, Validators.pattern("")])],
+    school: ['', Validators.required],
+    studentPhone: ['', Validators.compose([Validators.required, Validators.minLength(10), Validators.maxLength(10)])],
+    parentPhone: ['', Validators.compose([Validators.required, Validators.minLength(10), Validators.maxLength(10)])],
+    grade: ['', Validators.required]
   })
 
   // making sure that everything is filled out
@@ -100,9 +100,4 @@ export class RegisterPage {
 
     alert.present();
   }
-
-
-
-  
-
 }

@@ -1,11 +1,9 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
-
-
 @Injectable()
 export class ServerProvider {
-  base = 'http://0becd245.ngrok.io';
+  base = 'http://63709715.ngrok.io';
   serverURL = '/txt-sign-in-facial-recognition/';
 
   constructor(public http: HttpClient,) {
@@ -74,4 +72,13 @@ export class ServerProvider {
     });
   }
 
+  alternateConfirm(userID){
+    let data = { userID : userID };
+    return new Promise(resolve => {
+      this.http.post(this.base + this.serverURL + 'alternateConfirm', data)
+        .subscribe(data => {
+          resolve(data);
+      });
+    });
+  }
 }

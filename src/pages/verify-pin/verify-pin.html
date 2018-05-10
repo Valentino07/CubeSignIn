@@ -1,29 +1,24 @@
 <ion-content padding class="main">
   <ion-grid>
-    <ion-row>
-      <ion-col class="center">
-        <p>Please enter your verification pin.</p>
-      </ion-col>
-    </ion-row>
     <ion-row text-center>
       <ion-col class="center">
         <form (ngSubmit)="verify()" text-center>
-          <ion-item text-center>
-            <ion-input type="tel" class="pin" [(ngModel)]='code' name="code" text-center></ion-input>
+          <ion-item text-center class="pinInput">
+            <ion-input type="tel" class="pin" [(ngModel)]='code' name="code" text-center placeholder="Input your pin here"></ion-input>
           </ion-item>
-          <button ion-button class="submit-btn" type="submit" block>Submit</button>
+          <button class="submitButton" type="submit" block>Submit</button>
         </form>
       </ion-col>
     </ion-row>
     <br><br>
-    <ion-row>
+    <ion-row text-center>
       <ion-col>
-        <button ion-button class="buttons" block (click)=generateCode()>Get New Code</button>
+        <button class="buttons" block (click)=generateCode()>Get New Code</button>
       </ion-col>
     </ion-row>
-    <ion-row>
+    <ion-row text-center>
       <ion-col>
-        <button ion-button class="buttons" block (click)=backButton()>Back</button>
+        <button class="buttons" block (click)=backButton()>Back</button>
       </ion-col>
     </ion-row>  
   </ion-grid>

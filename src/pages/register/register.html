@@ -7,7 +7,8 @@
 <body>
 	<div class="title">
 		Registration Form
-	</div>
+  </div>
+  <div class="line"></div>
   <form class="formWrapper" [formGroup]="myForm" novalidate> 
     <div class="formBox">
       <input id="fullName" formControlName="fullName" [class.invalid]="!myForm.controls.fullName.valid" type="text" placeholder="Full Name">

@@ -1,27 +1,84 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
-
-/*
-  Generated class for the ServerProvider provider.
-
-  See https://angular.io/guide/dependency-injection for more info on providers
-  and Angular DI.
-*/
 @Injectable()
 export class ServerProvider {
-  base = '';
-  serverURL = '';
-
-  complete;
+  base = 'https://txt-sign-in.herokuapp.com';
+  serverURL = '/txt-sign-in-facial-recognition/';
 
   constructor(public http: HttpClient,) {
-    // this.complete = this.navParams.get('complete');
-    // console.log(this.complete);
+  
   }
 
-  // public verifyNewUser(){
-  //   return this.http.get(this.base + this.serverURL + '/verify/email/number');
-  // }
+  registerUser(formData){
+    return new Promise(resolve => {
+      this.http.post(this.base + this.serverURL + 'signup', formData)
+        .subscribe(data => {
+            resolve(data);
+        });
+    });
+  }
 
+  rekognition(formData){
+    return new Promise(resolve => {
+      this.http.post(this.base + this.serverURL + 'rekognition', formData)
+        .subscribe(data => {
+          resolve(data);
+      });
+    });
+  }
+
+  checkIn(userID, scanPhoto, reasons){
+    let data = { 
+      userID : userID,
+      scan : scanPhoto,
+      reasons: reasons
+    };
+    return new Promise(resolve => {
+      this.http.post(this.base + this.serverURL + 'checkIn', data)
+        .subscribe(data => {
+          resolve(data);
+      });
+    });
+  }
+
+  checkOut(userID){
+    let data = { userID : userID };
+    return new Promise(resolve => {
+      this.http.post(this.base + this.serverURL + 'checkOut', data)
+        .subscribe(data => {
+          resolve(data);
+      });
+    });
+  }
+
+  verification(phoneNumber){
+    let data = { phoneNumber: phoneNumber};
+    return new Promise(resolve => {
+      this.http.post(this.base + this.serverURL + 'verify', data)
+        .subscribe(data => {
+          resolve(data);
+      });
+    });
+  }
+
+  alternateLogIn(email){
+    let data = { email : email};
+    return new Promise(resolve => {
+      this.http.post(this.base + this.serverURL + 'alternate', data)
+        .subscribe(data => {
+          resolve(data);
+      });
+    });
+  }
+
+  alternateConfirm(userID){
+    let data = { userID : userID };
+    return new Promise(resolve => {
+      this.http.post(this.base + this.serverURL + 'alternateConfirm', data)
+        .subscribe(data => {
+          resolve(data);
+      });
+    });
+  }
 }

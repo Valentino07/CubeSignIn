@@ -1,0 +1,25 @@
+page-verify-pin {
+    .pinInput{
+        width: 300px;
+        margin: auto;
+        margin-top: 200px;
+        margin-bottom: 50px;
+        font-size: 30px;
+    }
+    button{
+        width: 250px;
+        height: 70px;
+        margin-top: 40px;
+        background-color: #00FA9A;
+        border: solid 1px #00FA9A;
+        color: white;
+        border-radius: 5%;
+        font-size: 22px;
+    }
+    .submitButton{
+        margin-bottom: -70px;
+    }
+    .buttons{
+        margin-bottom: 10px;
+    }
+}

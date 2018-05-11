@@ -8,14 +8,15 @@
 	<div class="title">
 		TXT Check In
 	</div>
+	<hr id="divider" />
 	<div class="button">
-	<button [navPush]="register" id="button">Register</button>
+	<button (click)='registerButton()' id="button">Register</button>
 	</div>
 	<div class="button">
-    <button [navPush]="signIn" id="button">Sign In</button>
+    <button (click)='signInButton()' id="button">Sign In</button>
 	</div>
     <div class="button">
-    <button [navPush]="logout" id="button">Sign Out</button>
+    <button (click)='signOutButton()' id="button">Sign Out</button>
     </div>
 
 </body>

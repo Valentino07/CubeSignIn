@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
-import { LogoutPage } from './logout';
+import { ConfirmPage } from './confirm';
 
 @NgModule({
   declarations: [
-    LogoutPage,
+    ConfirmPage,
   ],
   imports: [
-    IonicPageModule.forChild(LogoutPage),
+    IonicPageModule.forChild(ConfirmPage),
   ],
 })
-export class LogoutPageModule {}
+export class ConfirmPageModule {}

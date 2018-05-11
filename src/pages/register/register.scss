@@ -1,6 +1,6 @@
 page-register {
     body{
-        background-color: #0077b8;
+        background-color: white;
         font-family: Poppins, sans-serif;
     }
     .formWrapper{
@@ -8,39 +8,49 @@ page-register {
         margin-top: 40px;
     }
     .title{
-        margin-top: 100px;
+        margin-top: 80px;
         text-align: center;
-        color: white;
+        color: #666666;
         font-size: 24px;
-        font-weight: 600;
+        font-weight: 200;
+        font-size: 30px;
+    }
+    .line{
+        border-bottom: solid 1px #00FA9A;
+        width: 20%;
+        margin: auto;
+        margin-top: 20px;
     }
     .submit{
         text-align: center;
     }
     #submitInfo{
-        background-color: white;
-        color: #243841;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        border: solid 1px white;
-        width: 100px;
-        margin-top: 7px;
-        border-radius: 10px;
+        background-color: #00FA9A;
+        color: white;
+        padding-top: 17px;
+        padding-bottom: 17px;
+        border: solid 1px #00FA9A;
+        width: 160px;
+        margin-top: 20px;
+        border-radius: 30px;
         font-weight: 600;
-        font-size: 16px;
+        font-size: 18px;
     }
     .formBox{
-        margin-bottom: 15px;
+        margin-bottom: 20px;
         text-align: center;
     }
     input{
-        padding-top: 15px;
-        padding-bottom: 15px;
-        width: 200px;
-        border: solid 1px white;
-        border-radius: 10px;
-        width: 250px;
+        padding-top: 18px;
+        padding-bottom: 18px;
+        border: solid 1px #00FA9A;
+        border-radius: 30px;
+        width: 320px;
         padding-left: 10px;
+        font-size: 18px;
+    }
+    .formWrapper{
+        margin-top: 80px;
     }
     
 }

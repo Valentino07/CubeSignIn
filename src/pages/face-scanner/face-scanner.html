@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Camera {{type}}</title>
+      <link href="https://fonts.googleapis.com/css?family=Hind:600|Poppins:400,700" rel="stylesheet" />
+    </head>
+  <div *ngIf="type=='signIn'">
+    <body>
+      <div class="title">
+        TXT Check In
+      </div>
+      <div class="line"></div>
+      <h4>Take a Photo of Yourself to Sign Into the Cube!</h4>
+      <button (click)="cameraButton()" id="cameraRegister">Take Picture</button>
+    </body>
+  </div>
+
+  <div *ngIf="type=='signOut'">
+      <body>
+        <div class="title">
+          TXT Check In
+        </div>
+        <div class="line"></div>
+        <h4>Take a Photo of Yourself to Sign Out of the Cube!</h4>
+        <button (click)="cameraButton()" id="cameraRegister">Take Picture</button>
+      
+      </body>
+  </div>
+</html>
+ 
+ 

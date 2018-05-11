@@ -3,32 +3,37 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule, NavParams } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
-import {Camera} from '@ionic-native/camera';
+import { Camera } from '@ionic-native/camera';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import {RegisterPage} from '../pages/register/register';
-import {SignInPage} from '../pages/sign-in/sign-in';
-import {LogoutPage} from '../pages/logout/logout';
-import {CameraRegisterPage} from '../pages/camera-register/camera-register'
+import { RegisterPage } from '../pages/register/register';
+import { CameraRegisterPage } from '../pages/camera-register/camera-register'
 import { ServerProvider } from '../providers/server/server';
 import { Http , HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClient } from '@angular/common/http';
+import { CameraProvider } from '../providers/camera/camera';
+import { VerifyPinPage } from '../pages/verify-pin/verify-pin';
+import { ConfirmPage } from '../pages/confirm/confirm';
+import { FaceScannerPage } from '../pages/face-scanner/face-scanner';
+import { AlternateLoginPage } from '../pages/alternate-login/alternate-login';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     RegisterPage,
-    SignInPage,
-    LogoutPage,
-    CameraRegisterPage
+    CameraRegisterPage,
+    VerifyPinPage,
+    FaceScannerPage,
+    ConfirmPage,
+    AlternateLoginPage
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     HttpModule,
-    IonicModule.forRoot(MyApp),
+    IonicModule.forRoot(MyApp)
 
   ],
   bootstrap: [IonicApp],
@@ -36,9 +41,11 @@ import { HttpClient } from '@angular/common/http';
     MyApp,
     HomePage,
     RegisterPage,
-    SignInPage,
-    LogoutPage,
-    CameraRegisterPage
+    CameraRegisterPage,
+    FaceScannerPage,
+    VerifyPinPage,
+    ConfirmPage,
+    AlternateLoginPage
   ],
   providers: [
     StatusBar,
@@ -48,7 +55,8 @@ import { HttpClient } from '@angular/common/http';
     ServerProvider, 
     Http,
     HttpClientModule,
-    HttpClient
+    HttpClient,
+    CameraProvider
   ]
 })
 export class AppModule {}

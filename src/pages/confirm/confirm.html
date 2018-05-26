@@ -1,37 +1,40 @@
 <ion-content padding>
-  <img  height="250" src="{{profilePicture}}">
-  <p>{{name}}</p>
+  <img  height="300" width="210" src="{{profilePicture}}">
+  <p class="userName">{{name}}</p>
+  <div class="line"></div>
   <div *ngIf="info.type=='signIn'">
-    <p>What is the reason for your visit today?</p>
-    <ion-list>
+    <p>What brings you to the cube?</p>
+    <ion-list class="list">
 
       <ion-item>
-        <ion-label>Homework</ion-label>
-        <ion-checkbox (click)=booleanChange(0)></ion-checkbox>
+        <ion-label class="label">Homework</ion-label>
+        <ion-checkbox color="secondary" (click)=booleanChange(0)></ion-checkbox>
       </ion-item>
     
       <ion-item>
-        <ion-label>Workshop</ion-label>
-        <ion-checkbox (click)=booleanChange(1)></ion-checkbox>
+        <ion-label class="label">Workshop</ion-label>
+        <ion-checkbox color="secondary" (click)=booleanChange(1)></ion-checkbox>
       </ion-item>
     
       <ion-item>
-        <ion-label>Event</ion-label>
-        <ion-checkbox (click)=booleanChange(2)></ion-checkbox>
+        <ion-label class="label">Event</ion-label>
+        <ion-checkbox color="secondary" (click)=booleanChange(2)></ion-checkbox>
       </ion-item>
 
       <ion-item>
-        <ion-label>Coding</ion-label>
-        <ion-checkbox (click)=booleanChange(3)></ion-checkbox>
+        <ion-label class="label">Coding</ion-label>
+        <ion-checkbox color="secondary" (click)=booleanChange(3)></ion-checkbox>
       </ion-item>
 
       <ion-item>
-        <ion-label>Other</ion-label>
-        <ion-checkbox (click)=booleanChange(4)></ion-checkbox>
+        <ion-label class="label">Other</ion-label>
+        <ion-checkbox color="secondary" (click)=booleanChange(4)></ion-checkbox>
       </ion-item>
       
     </ion-list>
   </div>
-  <button ion-button (click)=declineButton()>No. It is not me.</button>
-  <button ion-button (click)=confirmButton()>Yes! It is me.</button>
+  <div class="buttons">
+  <button (click)=declineButton() class="no">No. It is not me.</button>
+  <button (click)=confirmButton() class="yes">Yes! It is me.</button>
+  </div>
 </ion-content>

@@ -1,3 +1,71 @@
 page-confirm {
-
+    body{
+        margin-left: none;
+    }
+    img{
+        border: solid 1px transparent;
+        border-radius: 100px;
+        display: block;
+        margin: auto;
+    }
+    p{
+        font-size: 24px;
+        color: #666666;
+        text-align: center;
+    }
+    .userName{
+        margin-bottom: 30px;
+    }
+    .line{
+        border-bottom: solid 3px #00FA9A;
+        width: 20%;
+        margin: auto;
+        margin-top: 20px;
+    }
+    .buttons{
+        text-align: center;
+    }
+    .no{
+        margin-right: 10px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 35px;
+        padding-right: 35px;
+        background-color: #00FA9A;
+        color: white;
+        border: solid 2px transparent;
+        border-radius: 35px;
+        font-size: 20px;
+        box-shadow: 2px 2px 2px #eee;
+    }
+    .yes{
+        margin-left: 10px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 38px; 
+        padding-right: 38px;
+        background-color: white;
+        color: #00FA9A;
+        border: solid 2px #00FA9A;
+        border-radius: 35px;
+        font-size: 20px;
+        box-shadow: 2px 2px 2px #eee;
+    }
+    .secondary{
+        color: #00FA9A;
+    }
+    .list{
+        margin-left: 25%;
+        margin-right: 25%;
+        font-size: 18px;
+    }
+    .label{
+        padding-left: 30px;
+    }
+    .label{
+        font-size: 18px;
+    }
+    .buttons{
+        margin-top: 50px;
+    }
 }

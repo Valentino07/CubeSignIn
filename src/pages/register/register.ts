@@ -27,11 +27,6 @@ export class RegisterPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad RegisterPage');
   }
-  // ngOnInIt() {
-  //   myForm = new FormGroup({
-  //     email: new FormControl()
-  //   });
-  // }
   
   // making sure that everything is required in the form and setting limitations for phone numbers
   myForm = this.formBuilder.group({
@@ -87,13 +82,13 @@ export class RegisterPage {
       message += '<br> Please enter a valid email.';
     }
     if (this.myForm.controls.school.invalid){
-      message += '<br> Please enter a valid email.';
+      message += '<br> Please enter a valid school name.';
     }
     if (this.myForm.controls.studentPhone.invalid){
-      message += '<br> Please enter a valid phone number. 10 digits No spaces';
+      message += '<br> Please enter a valid phone number. 10 digits. No spaces.';
     }
     if (this.myForm.controls.parentPhone.invalid){
-      message += '<br> Please enter a valid password. Password must be 4 characters long.';
+      message += '<br> Please enter a valid phone number. 10 digits. No spaces.';
     }
 
     alert.setMessage(message);

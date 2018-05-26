@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { RegisterPage } from '../register/register';
 import { FaceScannerPage } from '../face-scanner/face-scanner';
+import { ConfirmPage } from '../confirm/confirm';
 
 @Component({
   selector: 'page-home',

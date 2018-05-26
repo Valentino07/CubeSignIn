@@ -4,7 +4,7 @@ page-home {
         font-family: Poppins, sans-serif;
     }
     .title{
-        margin-top: 65px;
+        margin-top: 120px;
         text-align: center;
         color: gray;
         font-size: 34px;
@@ -12,27 +12,30 @@ page-home {
         margin-bottom: 10px;
     }
     #divider{
-        width: 10% !important;
+        width: 20% !important;
         height: 2px !important;
         display: block !important;
         background-color: #00FF99 !important;
+        margin-bottom: 120px;
+        margin-top: 20px;
 
     }
     .button{
         display: block;
         text-align: center;
-        margin-top: 50px;
+        margin-top: 80px;
     }
     #button{
         background-color: #00FF99;
         color: #fff;
         border: solid 1px white;
-        padding-top: 15px;
-        padding-bottom: 15px;
-        width: 200px;
+        padding-top: 18px;
+        padding-bottom: 18px;
+        width: 250px;
         border-radius: 50px;
         font-size: 25px;
         text-align: center;
+        box-shadow: 3px 3px 3px #eee;
     }
 
 }

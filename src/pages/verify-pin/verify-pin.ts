@@ -38,7 +38,7 @@ export class VerifyPinPage {
   }
 
   verify(){
-    if(this.code == this.verifyCode && this.code != ''){
+    if(this.code == this.verifyCode && this.code != '' && this.code != undefined){
       this.profilePicture();
     }else{
       this.invalidCode();
